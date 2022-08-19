@@ -57,7 +57,7 @@ jobs:
   terraform:
     name: "Terraform"
     runs-on: ubuntu-latest
-    environment: production
+    environment: appID-secret
     env:
       ARM_CLIENT_ID: ${{ secrets.APPID }}
       ARM_CLIENT_SECRET: ${{ secrets.PASSWORD }}
