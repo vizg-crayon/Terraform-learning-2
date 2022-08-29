@@ -44,3 +44,11 @@ resource "azurerm_storage_container" "rg" {
   storage_account_name  = azurerm_storage_account.rg.name
   container_access_type = "blob"
 }
+
+# Create a virtual network
+resource "azurerm_virtual_network" "vnet" {
+  name                = "VikVnet"
+  address_space       = ["10.0.0.0/16"]
+  location            = "southeastasia"
+  resource_group_name = azurerm_resource_group.rg.name
+}
