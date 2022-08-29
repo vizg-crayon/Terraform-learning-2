@@ -52,3 +52,11 @@ resource "azurerm_virtual_network" "vnet" {
   location            = "southeastasia"
   resource_group_name = azurerm_resource_group.rg.name
 }
+
+# Create add a second vnet
+resource "azurerm_virtual_network" "vnet2" {
+  name                = "VizVnet2"
+  address_space       = ["10.0.0.0/16"]
+  location            = "southeastasia"
+  resource_group_name = azurerm_resource_group.rg.name
+}
