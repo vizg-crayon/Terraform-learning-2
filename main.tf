@@ -10,11 +10,11 @@ terraform {
   required_version = ">= 1.1.0"
 
   backend "azurerm" {
-        resource_group_name  = "Vik-tf-rg"
-        storage_account_name = "vikremotestorage"
-        container_name       = "vikstrgcontainer"
-        key                  = "terraform.tfstate"
-    }
+    resource_group_name  = "Vik-tf-rg"
+    storage_account_name = "vikremotestorage"
+    container_name       = "vikstrgcontainer"
+    key                  = "terraform.tfstate"
+  }
 }
 
 provider "azurerm" {
